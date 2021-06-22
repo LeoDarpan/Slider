@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  padding: 60px 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .left:hover, .container .right:hover {
+  cursor: pointer;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: sans-serif;
+  font-size: 3vw;
+  padding: 60px 80px;
+  color: #FFF;
+  background-color: #000;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: all 0.9s ease-in-out;
+  transition: all 0.9s ease-in-out;
+}
+
+header .neon {
+  text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #00aF, 0 0 80px #00f, 0 0 90px #00f, 0 0 100px #00f, 0 0 150px #00f;
+}
+
+.main {
+  padding: 10px;
+  height: auto;
+  width: 600px;
+  margin: 0 auto;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .9s ease-in-out;
+  transition: all .9s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .window {
+  height: auto;
+  width: 530px;
+  overflow: hidden;
+}
+
+.main .window .slider {
+  padding: 10px;
+  width: 1210px;
+  height: 170px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.main .window .slider .slide {
+  margin: 0 10px;
+  padding: 0;
+  display: block;
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+
+.main .window .slider .slide img {
+  width: 100%;
+  max-width: 100%;
+  height: inherit;
+}
+
+.main .left div, .main .right div {
+  width: 30px;
+  height: 4px;
+  background-color: #000;
+}
+
+.main .left .first {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  position: relative;
+  top: -10px;
+}
+
+.main .left .second {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  position: relative;
+  top: 6px;
+}
+
+.main .right .first {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+  position: relative;
+  top: -10px;
+}
+
+.main .right .second {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+  position: relative;
+  top: 6px;
+}
+
+.main .left:hover, .main .right:hover {
+  cursor: pointer;
+}
+
+.main .left:hover .first, .main .left:hover .second, .main .right:hover .first, .main .right:hover .second {
+  background-color: #ffa500;
+}
+
+.code {
+  width: 100%;
+  padding: 40px 60px;
+  margin: 0 auto;
+  background-color: brown;
+  color: white;
+}
+
+.code p {
+  font-style: italic;
+  line-height: 25px;
+  color: #FFFFFF;
+}
+
+.code ol {
+  margin: 20px 0px;
+}
+
+.code .HTML, .code .CSS, .code .JS {
+  margin: 0 auto;
+  background-color: #000;
+  color: #ff0ff0;
+  text-shadow: 0px 0px 12px #FFF;
+  overflow: auto;
+}
+
+.challenges {
+  width: 100%;
+  margin: 0 auto;
+  background-color: #FF1111;
+  color: white;
+  padding: 40px 60px;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.caution {
+  width: 100%;
+  padding: 40px 60px;
+  background-color: black;
+  color: white;
+  -webkit-animation: neon-text 2s infinite;
+          animation: neon-text 2s infinite;
+  text-align: center;
+  font-size: 2vw;
+}
+
+@-webkit-keyframes neon-text {
+  0%, 25%, 75%, 100% {
+    text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff;
+  }
+  10%, 50%, 90% {
+    text-shadow: none;
+  }
+}
+
+@keyframes neon-text {
+  0%, 25%, 75%, 100% {
+    text-shadow: 0px 0px 5px #ffffff, 0px 0px 10px #ffffff, 0px 0px 15px #ffffff;
+  }
+  10%, 50%, 90% {
+    text-shadow: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */
