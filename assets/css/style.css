@@ -45,13 +45,20 @@ header {
 }
 
 header .neon {
+  margin-left: 13px;
   text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #00aF, 0 0 80px #00f, 0 0 90px #00f, 0 0 100px #00f, 0 0 150px #00f;
+}
+
+@media (max-width: 720px) {
+  header {
+    font-size: 5vw;
+  }
 }
 
 .main {
   padding: 10px;
   height: auto;
-  width: 600px;
+  width: 90%;
   margin: 0 auto;
   -webkit-transform: scale(0);
           transform: scale(0);
@@ -97,46 +104,76 @@ header .neon {
   height: inherit;
 }
 
-.main .left div, .main .right div {
+@media (max-width: 485px) {
+  .main .window {
+    width: 190px;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 485px) {
+  .main .window {
+    width: 360px;
+  }
+}
+
+.main .left div, .main .right div, .main .left1 div, .main .right1 div, .main .left2 div, .main .right2 div {
   width: 30px;
   height: 4px;
   background-color: #000;
 }
 
-.main .left .first {
+.main .left .first, .main .left1 .first, .main .left2 .first {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   position: relative;
   top: -10px;
 }
 
-.main .left .second {
+.main .left .second, .main .left1 .second, .main .left2 .second {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
   position: relative;
   top: 6px;
 }
 
-.main .right .first {
+.main .right .first, .main .right1 .first, .main .right2 .first {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   position: relative;
   top: -10px;
 }
 
-.main .right .second {
+.main .right .second, .main .right1 .second, .main .right2 .second {
   -webkit-transform: rotate(135deg);
           transform: rotate(135deg);
   position: relative;
   top: 6px;
 }
 
-.main .left:hover, .main .right:hover {
+.main .left:hover, .main .right:hover, .main .left1:hover, .main .right1:hover, .main .left2:hover, .main .right2:hover {
   cursor: pointer;
 }
 
-.main .left:hover .first, .main .left:hover .second, .main .right:hover .first, .main .right:hover .second {
+.main .left:hover .first, .main .left:hover .second, .main .right:hover .first, .main .right:hover .second, .main .left1:hover .first, .main .left1:hover .second, .main .right1:hover .first, .main .right1:hover .second, .main .left2:hover .first, .main .left2:hover .second, .main .right2:hover .first, .main .right2:hover .second {
   background-color: #ffa500;
+}
+
+@media (max-width: 485px) {
+  .main .left, .main .left2, .main .right, .main .right2 {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 485px) {
+  .main .left, .main .left1, .main .right, .main .right1 {
+    display: none;
+  }
+}
+
+@media (min-width: 600px) {
+  .main .left1, .main .left2, .main .right1, .main .right2 {
+    display: none;
+  }
 }
 
 .code {
@@ -175,6 +212,18 @@ header .neon {
   font-size: 1rem;
 }
 
+.challenges .update {
+  background-color: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media (max-width: 720px) {
+  .challenges {
+    font-size: 5vw;
+  }
+}
+
 .caution {
   width: 100%;
   padding: 40px 60px;
@@ -184,6 +233,16 @@ header .neon {
           animation: neon-text 2s infinite;
   text-align: center;
   font-size: 2vw;
+}
+
+.caution .new {
+  color: red;
+}
+
+@media (max-width: 720px) {
+  .caution {
+    font-size: 5vw;
+  }
 }
 
 @-webkit-keyframes neon-text {

@@ -9,10 +9,18 @@
 </head>
 <body>
     <header>
-        This is how you make a Slider using <span class="neon" style="margin-left: 13px;">Vanila JavaScript</span> !
+        This is how you make a Slider using <span class="neon">Vanila JavaScript</span> !
     </header>
     <section class="main">
         <div class="left">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <div class="left1">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <div class="left2">
             <div class="first"></div>
             <div class="second"></div>
         </div>
@@ -28,6 +36,14 @@
             </div>
         </div>
         <div class="right">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <div class="right1">
+            <div class="first"></div>
+            <div class="second"></div>
+        </div>
+        <div class="right2">
             <div class="first"></div>
             <div class="second"></div>
         </div>
@@ -40,169 +56,170 @@
         <p>So, I decided to give it a go and trust me, it was easy but demanded calculative smartness.</p>
         <p style="font-weight: 900; font-size: 30px; margin: 20px 0px; color:gold;">HTML:</p>
         <xmp class="HTML">
-    <section class="main">
-        <div class="left">
-            <div class="first"></div>
-            <div class="second"></div>
-        </div>
-        <div class="window">
-            <div class='slider'>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/technician.jpg" alt=""> </div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/currentShop.jpg" alt=""></div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/auto-repair-stand.jpg " alt=""></div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/waitingRoom.jpg" alt=""></div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/bobbyShop.jpg" alt=""></div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/tires.jpg" alt=""></div>
-                <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/techUnderCar.jpg" alt=""></div>
+        <section class="main">
+            <div class="left">
+                <div class="first"></div>
+                <div class="second"></div>
             </div>
-        </div>
-        <div class="right">
-            <div class="first"></div>
-            <div class="second"></div>
-        </div>
-    </section>
-        </xmp>
-        <p style="font-weight: 900; font-size: 30px; margin: 20px 0px; color:gold;">CSS:</p>
-        <p>
-            Here is the math trick that I played here:
-            <ol>
-                <li>
-                    Calculate the ultimate width of one slide.
-                    <br>This means the normal width + the margin on left and right.
-                    <br>So here it becomes 150px + 10px + 10px = 170px.
-                </li>
-                <li>
-                    Next thing to do is to decide the total number of slides that we need in the slider.
-                    <br>In my case it is 7, so the width should be: 1190px.
-                    <br>But you may notice it as 1210px. Can you guess why? Notice the padding that I have given above in the code?
-                    <br>Naturally, it also adds to the width, so 20px extra.
-                </li>
-                <li>
-                    Next, we need to put this slider in a container, which could restrict the visibility of the slider to the number of slides we want it to show.
-                    <br>So, i put it in a window that shows only three slides at a time with a width of 530px, again with 20px additional to the normal 510ox width.
-                </li>
-                <li>
-                    That's it fellas. That's all the math. Now the next trick is to tune JS.
-                </li>
-            </ol>      
-        </p>
-        <xmp class="CSS">
-            .main{
-                padding: 10px;
-                height: auto;
-                width: 600px;
-                margin: 0 auto;
-                transform: scale(0);
-                transition: all .9s ease-in-out;
-                @include flex;
-                .window{
+            <div class="window">
+                <div class='slider'>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/technician.jpg" alt=""> </div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/currentShop.jpg" alt=""></div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/auto-repair-stand.jpg " alt=""></div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/waitingRoom.jpg" alt=""></div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/bobbyShop.jpg" alt=""></div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/tires.jpg" alt=""></div>
+                    <div class="slide"><img src="https://a1quickoilllc.kukui.com/Files/Images/gallery/techUnderCar.jpg" alt=""></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="first"></div>
+                <div class="second"></div>
+            </div>
+        </section>
+            </xmp>
+            <p style="font-weight: 900; font-size: 30px; margin: 20px 0px; color:gold;">CSS:</p>
+            <p>
+                Here is the math trick that I played here:
+                <ol>
+                    <li>
+                        Calculate the ultimate width of one slide.
+                        <br>This means the normal width + the margin on left and right.
+                        <br>So here it becomes 150px + 10px + 10px = 170px.
+                    </li>
+                    <li>
+                        Next thing to do is to decide the total number of slides that we need in the slider.
+                        <br>In my case it is 7, so the width should be: 1190px.
+                        <br>But you may notice it as 1210px. Can you guess why? Notice the padding that I have given above in the code?
+                        <br>Naturally, it also adds to the width, so 20px extra.
+                    </li>
+                    <li>
+                        Next, we need to put this slider in a container, which could restrict the visibility of the slider to the number of slides we want it to show.
+                        <br>So, i put it in a window that shows only three slides at a time with a width of 530px, again with 20px additional to the normal 510ox width.
+                    </li>
+                    <li>
+                        That's it fellas. That's all the math. Now the next trick is to tune JS.
+                    </li>
+                </ol>      
+            </p>
+            <xmp class="CSS">
+                .main{
+                    padding: 10px;
                     height: auto;
-                    width:  530px;
-                    overflow: hidden;
-                    .slider{
-                        padding: 10px;
-                        width: 1210px;
-                        height: 170px;
-                        transition: all .5s ease-in-out;
-                        .slide{
-                            margin: 0 10px;
-                            padding: 0;
-                            display: block;
-                            float: left;
-                            width: 150px;
-                            height: 150px;
-                            img{
-                                width: 100%;
-                                max-width: 100%;
-                                height: inherit;
+                    width: 600px;
+                    margin: 0 auto;
+                    transform: scale(0);
+                    transition: all .9s ease-in-out;
+                    @include flex;
+                    .window{
+                        height: auto;
+                        width:  530px;
+                        overflow: hidden;
+                        .slider{
+                            padding: 10px;
+                            width: 1210px;
+                            height: 170px;
+                            transition: all .5s ease-in-out;
+                            .slide{
+                                margin: 0 10px;
+                                padding: 0;
+                                display: block;
+                                float: left;
+                                width: 150px;
+                                height: 150px;
+                                img{
+                                    width: 100%;
+                                    max-width: 100%;
+                                    height: inherit;
+                                }
                             }
                         }
                     }
-                }
-                .left, .right{
-                    div{
-                        width: 30px;
-                        height: 4px;
-                        background-color: #000;
+                    .left, .right{
+                        div{
+                            width: 30px;
+                            height: 4px;
+                            background-color: #000;
+                        }
+                    }
+                    .left{
+                        .first{
+                            transform: rotate(-45deg);
+                            position: relative;
+                            top: -10px;
+                        }
+                        .second{
+                            transform: rotate(45deg);
+                            position: relative;
+                            top: 6px;
+                        }
+                    }
+                    .right{
+                        .first{
+                            transform: rotate(-135deg);
+                            position: relative;
+                            top: -10px;
+                        }
+                        .second{
+                            transform: rotate(135deg);
+                            position: relative;
+                            top: 6px;
+                        }
+                    }
+                    .left:hover, .right:hover{
+                        cursor: pointer;
+                        .first, .second{
+                            background-color: #ffa500;
+                        }
                     }
                 }
-                .left{
-                    .first{
-                        transform: rotate(-45deg);
-                        position: relative;
-                        top: -10px;
-                    }
-                    .second{
-                        transform: rotate(45deg);
-                        position: relative;
-                        top: 6px;
-                    }
-                }
-                .right{
-                    .first{
-                        transform: rotate(-135deg);
-                        position: relative;
-                        top: -10px;
-                    }
-                    .second{
-                        transform: rotate(135deg);
-                        position: relative;
-                        top: 6px;
-                    }
-                }
-                .left:hover, .right:hover{
-                    cursor: pointer;
-                    .first, .second{
-                        background-color: #ffa500;
-                    }
-                }
-            }
-        </xmp>
-        <ol>
-            <li>
-                We need to make such a logic that slides the slider, as the name suggests. For that, we can employ transform property.
-            </li>
-            <li>
-                For every click, on the left or rigth custom made arrows on far ends, the slide should slide left or right.
-            </li>
-            <li>
-                The translateX property from the group of transform properties could do the trick. 
-                <br>Hence, on every click, I move the slider by the offset equal to the ultimate width of one slide that we calculated above (170px).
-            </li>
-            <li>
-                To bring the slider to the initial position, we need to monitor the total clicks that take it the last slide plus one more click to bring to the original position.
-                <br>That's why I am counting till 850px (which equals five clicks) on the right custom made arrow.
-                <br>Not to mention, clicking on the left arrow moves the slider by putting negative values in the translateX property which you can notice yourself.
-            </li>
-            <li>
-                That's it folks, with such a clever trick, you can make your own slider using HTML, CSS and pure JS, without needing any library for your project to do that.
-            </li>
-        </ol>
-        <p style="font-weight: 900; font-size: 30px; margin: 20px 0px; color:gold;">JS:</p>
-        <xmp class="JS">
-            var left = document.querySelectorAll(".left");
-            var slider = document.querySelector(".slider");
-            var right = document.querySelectorAll(".right");
+            </xmp>
+            <ol>
+                <li>
+                    We need to make such a logic that slides the slider, as the name suggests. For that, we can employ transform property.
+                </li>
+                <li>
+                    For every click, on the left or rigth custom made arrows on far ends, the slide should slide left or right.
+                </li>
+                <li>
+                    The translateX property from the group of transform properties could do the trick. 
+                    <br>Hence, on every click, I move the slider by the offset equal to the ultimate width of one slide that we calculated above (170px).
+                </li>
+                <li>
+                    To bring the slider to the initial position, we need to monitor the total clicks that take it the last slide plus one more click to bring to the original position.
+                    <br>That's why I am counting till 850px (which equals five clicks) on the right custom made arrow.
+                    <br>Not to mention, clicking on the left arrow moves the slider by putting negative values in the translateX property which you can notice yourself.
+                </li>
+                <li>
+                    That's it folks, with such a clever trick, you can make your own slider using HTML, CSS and pure JS, without needing any library for your project to do that.
+                </li>
+            </ol>
+            <p style="font-weight: 900; font-size: 30px; margin: 20px 0px; color:gold;">JS:</p>
+            <xmp class="JS">
+                var left = document.querySelectorAll(".left");
+                var slider = document.querySelector(".slider");
+                var right = document.querySelectorAll(".right");
 
-            left[0].addEventListener("click", ()=>{
-                offset += 170;
-                if(offset > 0)
-                    offset = 0;
-                translateX1(offset);
-            });
-            
-            right[0].addEventListener("click", ()=>{
-                offset -= 170;
-                if(offset <= -850)
-                    offset = 0;
-                translateX1(offset);
-            });
-            
-            function translateX1(offset){
-                slider.style.transform = "translateX("+offset+"px)";
-            }
-        </xmp>
+                left[0].addEventListener("click", ()=>{
+                    offset += 170;
+                    if(offset > 0)
+                        offset = 0;
+                    translateX1(offset);
+                });
+                
+                right[0].addEventListener("click", ()=>{
+                    offset -= 170;
+                    if(offset <= -850)
+                        offset = 0;
+                    translateX1(offset);
+                });
+                
+                function translateX1(offset){
+                    slider.style.transform = "translateX("+offset+"px)";
+                }
+            </xmp>
     </section>
+
     <section class="challenges">
         <p>
             With a sad heart though, this slider is plagued with some <span style="background-color: black;color: white; padding: 5px 4px;"> challenges</span> to overcome.
@@ -216,7 +233,8 @@
                 <br>So, the developer will be handling a lot of tweak calls, which makes it less viable to be sold.
             </li>
             <li>
-                Its, not <strong style="text-transform: uppercase; font-style: italic;">responsive</strong>, which is a need of the hour nowadays.
+                <del>Its, not <strong style="text-transform: uppercase; font-style: italic;">responsive</strong>, which is a need of the hour nowadays.</del>
+                <span class="update"> The slider is responsive now!!!</span>
             </li>
         </ol>
         <p>
@@ -226,7 +244,7 @@
     </section>
     <footer>
         <div class="caution">
-            Caution: This page is not responsive. And the design is not very appealing. I intend to coolify in future!
+           <del>Caution: This page is not</del> <span class="new"> responsive </span> <del> And the design is not very appealing. I intend to coolify in future!</del>
         </div>
     </footer>
     <script src="assets/script/script.js"></script>
