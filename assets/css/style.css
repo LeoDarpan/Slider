@@ -56,6 +56,7 @@ header .neon {
 }
 
 .main {
+  border: 1px solid blue;
   padding: 10px;
   height: auto;
   width: 90%;
@@ -110,7 +111,7 @@ header .neon {
   }
 }
 
-@media (max-width: 600px) and (min-width: 485px) {
+@media (max-width: 680px) and (min-width: 485px) {
   .main .window {
     width: 360px;
   }
@@ -158,19 +159,19 @@ header .neon {
   background-color: #ffa500;
 }
 
-@media (max-width: 485px) {
+@media screen and (max-width: 484px) {
   .main .left, .main .left2, .main .right, .main .right2 {
     display: none;
   }
 }
 
-@media (max-width: 600px) and (min-width: 485px) {
+@media screen and (max-width: 679px) and (min-width: 485px) {
   .main .left, .main .left1, .main .right, .main .right1 {
     display: none;
   }
 }
 
-@media (min-width: 600px) {
+@media screen and (min-width: 680px) {
   .main .left1, .main .left2, .main .right1, .main .right2 {
     display: none;
   }

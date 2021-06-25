@@ -46,6 +46,7 @@ header{
 }
 
 .main{
+    border: 1px solid blue;
     padding: 10px;
     height: auto;
     width: 90%;
@@ -79,7 +80,7 @@ header{
         @media(max-width: 485px){
             width: 190px;
         }
-        @media(max-width: 600px) and (min-width: 485px){
+        @media(max-width: 680px) and (min-width: 485px){
             width: 360px;
         }
     }
@@ -120,17 +121,17 @@ header{
             background-color: #ffa500;
         }
     }
-    @media(max-width:485px){
+    @media screen and (max-width:484px){
         .left, .left2, .right, .right2{
             display: none;
         }
     }
-    @media(max-width: 600px) and (min-width: 485px){
+    @media screen and (max-width: 679px) and (min-width: 485px){
         .left, .left1, .right, .right1{
             display: none;
         }
     }
-    @media(min-width:600px){
+    @media screen and (min-width:680px){
         .left1, .left2, .right1, .right2{
             display: none;
         }
